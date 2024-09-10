@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "es6",                    // Set the JavaScript version to ECMAScript 2015
+      "module": "commonjs",                // Use CommonJS module system
+      "strict": true,                      // Enable all strict type-checking options
+      "esModuleInterop": true,             // Enable compatibility with CommonJS modules
+      "skipLibCheck": true,                // Skip type checking of all declaration files
+      "forceConsistentCasingInFileNames": true, // Ensure consistent file naming casing
+      "moduleResolution": "node",          // Resolve modules using Node.js resolution
+      "types": ["node"]                    // Include Node.js type declarations
+    },
+    "include": ["**/*.ts"],                // Include all TypeScript files in the project
+    "exclude": ["node_modules"]            // Exclude the node_modules directory
+}
+  

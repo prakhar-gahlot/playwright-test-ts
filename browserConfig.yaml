@@ -1,0 +1,16 @@
+browsers:
+  - chrome
+  - MicrosoftEdge
+  - pw-firefox
+  - pw-webkit
+
+platforms:
+  - MacOS Ventura
+  - Windows 11
+  - Windows 10
+
+viewports:
+  - width: 1920
+    height: 1080
+  - width: 1280
+    height: 720
