@@ -17,6 +17,7 @@ const capabilities = {
     name: "Playwright Test",
     user: process.env.LT_USERNAME,
     accessKey: process.env.LT_ACCESS_KEY,
+    resolution: "1680x1050",
     network: true,
     video: true,
     console: true,
@@ -29,7 +30,7 @@ const capabilities = {
 // Patching the capabilities dynamically according to the project name.
 const modifyCapabilities = (configName, testName) => {
   let config = configName.split("@lambdatest")[0];
-  let [browserName, browserVersion, platform] = config.split(":");
+  let [browserName, browserVersion, platform,resolution] = config.split(":");
   capabilities.browserName = browserName
     ? browserName
     : capabilities.browserName;
@@ -39,6 +40,9 @@ const modifyCapabilities = (configName, testName) => {
   capabilities["LT:Options"]["platform"] = platform
     ? platform
     : capabilities["LT:Options"]["platform"];
+  capabilities["LT:Options"]["resolution"] = resolution
+  ? resolution
+  : capabilities["LT:Options"]["resolution"];
   capabilities["LT:Options"]["name"] = testName;
 };
 

@@ -12,12 +12,9 @@ const createProjects = (): Project[] => {
 
   configYaml.browsers.forEach((browser: string) => {
     configYaml.platforms.forEach((platform: string) => {
-      configYaml.viewports.forEach((viewport: { width: number; height: number }) => {
+      configYaml.resolutions.forEach((resolution: string) => {
         projects.push({
-          name: `${browser}:latest:${platform}@lambdatest`,
-          use: {
-            viewport,  // Apply the viewport settings directly
-          },
+          name: `${browser}:latest:${platform}:${resolution}@lambdatest`,
         });
       });
     });

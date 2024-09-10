@@ -9,8 +9,6 @@ platforms:
   - Windows 11
   - Windows 10
 
-viewports:
-  - width: 1920
-    height: 1080
-  - width: 1280
-    height: 720
+resolutions:
+  - 1024x768
+  - 1920x1080
