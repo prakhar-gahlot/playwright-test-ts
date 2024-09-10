@@ -15,8 +15,8 @@ const capabilities = {
     platform: "Windows 10",
     build: "Playwright TS Build",
     name: "Playwright Test",
-    user: process.env.LT_USERNAME,
-    accessKey: process.env.LT_ACCESS_KEY,
+    user: process.env.LT_USERNAME, // Set your username here or have it in environment variables
+    accessKey: process.env.LT_ACCESS_KEY, // Set your accesskey here or in environment variable
     network: true,
     video: true,
     console: true,
